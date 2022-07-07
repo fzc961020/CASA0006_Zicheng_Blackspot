@@ -15,7 +15,7 @@ The updated notebook is '0622_Update.ipynb'.
 
 
 ## 0707 Update
-1. Have Given up the idea of smoothing street View features using other environmental features.
+1. Have given up the idea of smoothing street View features using other environmental features.
 A series of attempts have been made to explore the association between street view and other environmental features, including: 
 
 * (A) Constructing correlation matrices and simple regression model with street view features and other environmental features.
@@ -23,12 +23,18 @@ Result: There is only poor correlation tested. The R2 score of regression model 
 
 * (B) Apply different combinations of independnet variables (use space syntax measures, street view features and POI independently, and two or three of them together) in the RF models，and check the importance scores of them.
 Result: Space syntax measures often show a higher importance score than street view features. The accuracy score of RF model using only space syntax measures is higher than that of model using only street view features.  
+
 According to the results above, it could not be a good idea to only focus on the performance of street view features.
 
 2. Use SMOTE method to oversample the minor classification in the dataset.
-A basic finding this week is that, fewer the junction types, better the model performance. My RF model in the original report has three junction classification (by accident count), and the model shows poor performance in classifying junctions with more accidents(recall below 0.5). With SMOTE method, the overall accuracy of RF model has risen to 0.85 and the recall of minority can be increased to 0.9+
+A basic finding this week is that, fewer the junction types, better the model performance. My RF model in the original report has three junction classification (by accident count), and the model shows poor performance in classifying junctions with more accidents(recall below 0.5). With SMOTE method, the overall accuracy of RF model and the recall of minority can be increased significantly.
 
 3.Reclassify junctions with number and severity of accidents
- **class 0**:  accident count = 0  **class 1**:  slight count >0  **class 2**:  serious count >2 and fatal count >0 
+ There are four classification methods tested in the updataed notebook
+ * Method a. **class 0**:  accident count = 0  **class 1**:  0< accident count <=2  **class 2**:  accident count >2   （The original method, with a potential accuracy socre to 0.72)
+* Method b. **class 0**:  accident count = 0  **class 1**:  accident count >0    (Simplify the classification for a higher accuracy socre）
+* Method c. **class 0**:  accident count = 0  **class 1**:  slight count >0  **class 2**:  serious count >0 and fatal count >0   (use both accident count and severity for classification)
+* Method d. **class 0**:  accident count = 0  **class 1**:  slight count >3 or serious count >0 a or fatal count >0   (use both accident count and severity)
+
 
 
