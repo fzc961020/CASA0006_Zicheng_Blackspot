@@ -26,7 +26,7 @@ Result: There is only poor correlation tested. The R2 score of regression model 
 
 Result: Space syntax measures often show a higher importance score than street view features. The accuracy score of RF model using only space syntax measures is higher than that of model using only street view features.  
 
-According to the results above, it could not be a good idea to only focus on the performance of street view features.
+According to the results above, it could not be a good idea to only focus on the performance of street view features. There are other morefeatures playing a more important role than street view.
 
 2. Use SMOTE method to oversample the minor classification in the dataset.
 A basic finding this week is that, fewer the junction types, better the model performance. My RF model in the original report has three junction types (by accident count), and the model shows poor performance in classifying junctions with more accidents(recall below 0.5). With SMOTE method, the overall accuracy of RF model and the recall of minority can be increased significantly.
