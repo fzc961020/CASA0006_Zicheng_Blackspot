@@ -35,7 +35,7 @@ A basic finding this week is that, fewer the junction types, better the model pe
  There are four classification methods tested in the updataed notebook
  * Method a. **class 0**:  accident count = 0  **class 1**:  0< accident count <=2  **class 2**:  accident count >2   （The original method, with a potential accuracy socre to 0.72)
 * Method b. **class 0**:  accident count = 0  **class 1**:  accident count >0    (Simplify the classification for a higher accuracy socre）
-* Method c. **class 0**:  accident count = 0  **class 1**:  0< slight count <=2  **class 2**:  serious count >0 and fatal count >0   (use both accident count and severity for classification)
+* Method c. **class 0**:  accident count = 0  **class 1**:  0< slight count <=2  **class 2**:  serious count >0 or fatal count >0   (use both accident count and severity for classification)
 * Method d. **class 0**:  accident count = 0  **class 1**:  slight count >3 or serious count >0 a or fatal count >0   (use both accident count and severity)
 
 Method c and d are updated threshold methodS for junction classification.
