@@ -16,4 +16,4 @@ The updated notebook is '0622_Update.ipynb'.
 
 ## 0707 Update
 1. Based on a series of attempts, I have given up the idea of smoothing Street View features using other socio-economic data. My attempts include: 
-** (A) Constructing scatterplots, correlation matrices and simple regression model to test the association between streetview features and other social contextual info. ** (B) Apply different combinations of independnet variables (space syntax measures, street view features and POI, singly, or two or three of them) in the regression model and check the importance score of it.
+**(A) Constructing scatterplots, correlation matrices and simple regression model to test the association between streetview features and other social contextual info. **(B) Apply different combinations of independnet variables (space syntax measures, street view features and POI, singly, or two or three of them) in the regression model and check the importance score of it.
