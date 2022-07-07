@@ -38,5 +38,5 @@ A basic finding this week is that, fewer the junction types, better the model pe
 * Method c. **class 0**:  accident count = 0  **class 1**:  0< slight count <=2  **class 2**:  serious count >0 or fatal count >0   (use both accident count and severity for classification)
 * Method d. **class 0**:  accident count = 0  **class 1**:  slight count >3 or serious count >0 a or fatal count >0   (use both accident count and severity)
 
-Method c and d are updated threshold methodS for junction classification.
+Method c and d are updated threshold methods for junction classification.
 
