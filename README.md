@@ -29,14 +29,14 @@ Result: Space syntax measures often show a higher importance score than street v
 According to the results above, it could not be a good idea to only focus on the performance of street view features.
 
 2. Use SMOTE method to oversample the minor classification in the dataset.
-A basic finding this week is that, fewer the junction types, better the model performance. My RF model in the original report has three junction classification (by accident count), and the model shows poor performance in classifying junctions with more accidents(recall below 0.5). With SMOTE method, the overall accuracy of RF model and the recall of minority can be increased significantly.
+A basic finding this week is that, fewer the junction types, better the model performance. My RF model in the original report has three junction types (by accident count), and the model shows poor performance in classifying junctions with more accidents(recall below 0.5). With SMOTE method, the overall accuracy of RF model and the recall of minority can be increased significantly.
 
 3.Reclassify junctions with number and severity of accidents
  There are four classification methods tested in the updataed notebook
  * Method a. **class 0**:  accident count = 0  **class 1**:  0< accident count <=2  **class 2**:  accident count >2   （The original method, with a potential accuracy socre to 0.72)
 * Method b. **class 0**:  accident count = 0  **class 1**:  accident count >0    (Simplify the classification for a higher accuracy socre）
-* Method c. **class 0**:  accident count = 0  **class 1**:  slight count >0  **class 2**:  serious count >0 and fatal count >0   (use both accident count and severity for classification)
+* Method c. **class 0**:  accident count = 0  **class 1**:  0< slight count <=2  **class 2**:  serious count >0 and fatal count >0   (use both accident count and severity for classification)
 * Method d. **class 0**:  accident count = 0  **class 1**:  slight count >3 or serious count >0 a or fatal count >0   (use both accident count and severity)
 
-
+method c and d are updated threshold method for junction classification.
 
