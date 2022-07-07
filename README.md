@@ -17,10 +17,11 @@ The updated notebook is '0622_Update.ipynb'.
 ## 0707 Update
 1. Have Given up the idea of smoothing street View features using other environmental features.
 A series of attempts have been made to explore the association between street view and other environmental features, including: 
-(A) Constructing correlation matrices and simple regression model with street view features and other environmental features.
+
+* (A) Constructing correlation matrices and simple regression model with street view features and other environmental features.
 Result: There is only poor correlation tested. The R2 score of regression model is around 0.2-0.3 between building(street view) and other variables.
 
-(B) Apply different combinations of independnet variables (use space syntax measures, street view features and POI independently, and two or three of them together) in the RF models，and check the importance scores of them.
+* (B) Apply different combinations of independnet variables (use space syntax measures, street view features and POI independently, and two or three of them together) in the RF models，and check the importance scores of them.
 Result: Space syntax measures often show a higher importance score than street view features. The accuracy score of RF model using only space syntax measures is higher than that of model using only street view features.  
 According to the results above, it could not be a good idea to only focus on the performance of street view features.
 
