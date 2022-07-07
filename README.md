@@ -15,5 +15,19 @@ The updated notebook is '0622_Update.ipynb'.
 
 
 ## 0707 Update
-1. Based on a series of attempts, I have given up the idea of smoothing Street View features using other socio-economic data. My attempts include: 
-**(A) Constructing scatterplots, correlation matrices and simple regression model to test the association between streetview features and other social contextual info. **(B) Apply different combinations of independnet variables (space syntax measures, street view features and POI, singly, or two or three of them) in the regression model and check the importance score of it.
+1. Have Given up the idea of smoothing street View features using other environmental features.
+A series of attempts have been made to explore the association between street view and other environmental features, including: 
+(A) Constructing correlation matrices and simple regression model with street view features and other environmental features.
+Result: There is only poor correlation tested. The R2 score of regression model is around 0.2-0.3 between building(street view) and other variables.
+
+(B) Apply different combinations of independnet variables (use space syntax measures, street view features and POI independently, and two or three of them together) in the RF models，and check the importance scores of them.
+Result: Space syntax measures often show a higher importance score than street view features. The accuracy score of RF model using only space syntax measures is higher than that of model using only street view features.  
+According to the results above, it could not be a good idea to only focus on the performance of street view features.
+
+2. Use SMOTE method to oversample the minor classification in the dataset.
+A basic finding this week is that, fewer the junction types, better the model performance. My RF model in the original report has three junction classification (by accident count), and the model shows poor performance in classifying junctions with more accidents(recall below 0.5). With SMOTE method, the overall accuracy of RF model has risen to 0.85 and the recall of minority can be increased to 0.9+
+
+3.Reclassify junctions with number and severity of accidents
+ **class 0**:  accident count = 0  **class 1**:  slight count >0  **class 2**:  serious count >2 and fatal count >0 
+
+
