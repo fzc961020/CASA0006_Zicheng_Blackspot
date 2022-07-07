@@ -26,17 +26,21 @@ Result: There is only poor correlation tested. The R2 score of regression model 
 
 Result: Space syntax measures often show a higher importance score than street view features. The accuracy score of RF model using only space syntax measures is higher than that of model using only street view features.  
 
-According to the results above, it could not be a good idea to only focus on the performance of street view features. There are other morefeatures playing a more important role than street view.
+According to the results above, it could not be a good idea to only focus on the performance of street view features. There are other features playing a more important role than street view.
 
 2. Use SMOTE method to oversample the minor classification in the dataset.
-A basic finding this week is that, fewer the junction types, better the model performance. My RF model in the original report has three junction types (by accident count), and the model shows poor performance in classifying junctions with more accidents(recall below 0.5). With SMOTE method, the overall accuracy of RF model and the recall of minority can be increased significantly.
+A basic finding this week is that, fewer the junction types, better the model performance. The RF model in the original report has three junction types (by accident count), and the model shows poor performance in classifying junctions with more accidents(recall below 0.5). With SMOTE method, the overall accuracy of RF model and the recall of minority can be increased significantly.Any suggestion about the use of oversampling methods？
 
 3.Reclassify junctions with number and severity of accidents
  There are four classification methods tested in the updataed notebook
  * Method a. **class 0**:  accident count = 0  **class 1**:  0< accident count <=2  **class 2**:  accident count >2   （The original method, with a potential accuracy socre to 0.72)
 * Method b. **class 0**:  accident count = 0  **class 1**:  accident count >0    (Simplify the classification for a higher accuracy socre）
-* Method c. **class 0**:  accident count = 0  **class 1**:  0< slight count <=2  **class 2**:  serious count >0 or fatal count >0   (use both accident count and severity for classification)
-* Method d. **class 0**:  accident count = 0  **class 1**:  slight count >3 or serious count >0 a or fatal count >0   (use both accident count and severity)
+* Method c. **class 0**:  accident count = 0  **class 1**:  0< slight accident <=2  **class 2**:  serious accident >0 or fatal accident >0   (use both accident count and severity for classification)
+* Method d. **class 0**:  accident count = 0  **class 1**:  slight accident >3 or serious accident >0 a or fatal accident >0   (use both accident count and severity)
 
 Method c and d are updated threshold methods for junction classification.
+
+4.The selection of hyperparameters and the feature importance analysis
+The selection of best RF model and the interpretion of feature imporatance can be critical paper in this paper. However, there seems no stable rank of feature importance as i changes the model's hyperparameters. Besides, I am afraid i haven't found the best hyperparameter combination with the current GridSearchCV settings. Could you provide any suggestions or strategies for model selection and interpretation?
+
 
