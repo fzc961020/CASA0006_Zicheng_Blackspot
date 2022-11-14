@@ -1,0 +1,6 @@
+﻿Feature Groups,train_accuracy,test_accuracy
+Activities,0.446769457,0.542553191
+Space Syntax,1,0.638297872
+Street View,0.975770925,0.473404255
+Junction Structure&Function,0.96989721,0.590425532
+All Features,1,0.680851064
