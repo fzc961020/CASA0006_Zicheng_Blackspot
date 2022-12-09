@@ -1,0 +1,6 @@
+﻿Feature Groups,train_accuracy,test_accuracy
+Comercial and Public Activities,0.446769457,0.542553191
+Road Network Configuration,1,0.627659574
+Street View,0.975770925,0.473404255
+Junction Structure and Facility,0.96989721,0.590425532
+All Features,1,0.686170213
