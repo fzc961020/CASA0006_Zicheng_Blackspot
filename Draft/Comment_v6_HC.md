@@ -6,3 +6,4 @@ Author: Huanfa Chen
 2. Is the difference of 'local' and 'global' really important? If not, can remove. Why is the 'Levels of road' considered as a global feature? 
 3. Figures need substantial improvements, such as clear labels. If colours are not needed, can remove.
 4. The definition of three types of risk levels needs justification.
+5. Punctuations need double check - please don't use Chinese punctuations, e.g. commas. Spaces should be double checked.
